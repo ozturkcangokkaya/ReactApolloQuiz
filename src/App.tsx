@@ -7,13 +7,13 @@ import SearchBar from './components/searchBar';
 import {ItemProps} from './components/Item';
 
 const GET_POKEMONS = gql`
-	{
-		pokemons(first: 48){
-			id
-			name
-			image
-		}
-	}
+  {
+    pokemons(first: 48){
+      id
+      name
+      image
+    }
+  }
 `;
 
 const AppContainer = styled.div`
@@ -41,12 +41,12 @@ const App = () => {
   if (loading) return <InfoMessage>Loading Pokemons...</InfoMessage>;
   if (error) return <InfoMessage>Error! ${error.message}</InfoMessage>;
 
-	return (
+  return (
     <AppContainer>
       <SearchBar onKeyUp={setSearchValue} />
       <List items={pokemons.filter((pokemon:ItemProps) => pokemon.name.toLowerCase().includes(searchValue))} />
     </AppContainer>
-	)
+  )
 }
 
 export default App;
