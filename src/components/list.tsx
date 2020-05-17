@@ -5,7 +5,7 @@ import Item, {ItemProps} from './Item';
 interface ListProps {
   items: ItemProps[];
 }
-
+ 
 const Wrapper = styled.div`
 	width: 100%;
 	display: grid;
