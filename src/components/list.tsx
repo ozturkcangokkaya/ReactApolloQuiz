@@ -1,11 +1,11 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
-import Item, {ItemProps} from './Item';
+import Item, { ItemProps } from './Item';
 
 interface ListProps {
-  items: ItemProps[];
+	items: ItemProps[];
 }
- 
+
 const Wrapper = styled.div`
 	width: 100%;
 	display: grid;
@@ -13,12 +13,12 @@ const Wrapper = styled.div`
 	grid-gap: 20px;
 `;
 
-const List: FC<ListProps> = props => {
-  const {items} = props;
+const List: FC<ListProps> = (props) => {
+	const { items } = props;
 
-  return (
-    <Wrapper>
-      {items.map((pokemon:ItemProps) => (
+	return (
+		<Wrapper>
+			{items.map((pokemon: ItemProps) => (
 				<Item
 					key={pokemon.id}
 					id={pokemon.id}
@@ -26,8 +26,8 @@ const List: FC<ListProps> = props => {
 					image={pokemon.image}
 				/>
 			))}
-    </Wrapper>
-  )
-}
+		</Wrapper>
+	);
+};
 
 export default List;

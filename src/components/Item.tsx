@@ -21,7 +21,7 @@ const Container = styled.div`
 	&:hover {
 		border-color: aqua;
 	}
-`; 
+`;
 
 const ImageContainer = styled.div`
 	width: 100%;
